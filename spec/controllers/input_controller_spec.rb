@@ -24,6 +24,13 @@ RSpec.describe InputController, type: :controller do
       end
       
     end
+    
+    context 'routes' do
+      it 'should be accessible at /input/check/:number' do
+        expect(get: '/input/check/4').to route_to(controller: 'input', action: 'check', number: '4')
+      end
+    end
+    
   end
 
 end

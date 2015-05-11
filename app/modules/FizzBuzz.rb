@@ -1,5 +1,6 @@
 module FizzBuzz
   def self.check(num)
-    "#{'Fizz' if num.modulo(3).zero?}#{'Buzz' if num.modulo(5).zero?}"
+    val = {"FizzBuzz" => 15, "Fizz" => 3, "Buzz" => 5}.detect {|key, value| num % value == 0 }
+    val ? val.first : ""
   end
 end
